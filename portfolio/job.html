@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <style>
+    body {
+      background-color: #b0e280;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      background-color: #d38ec4;
+      text-align: center;
+      padding: 15px;
+      border-radius: 10px 10px 0 0;
+      font-size: 28px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 12px;
+      background-color: #4caf50;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .img-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .img-container img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1><i><u>Job Application Form</u></i></h1>
+
+    <form>
+      <label for="fullname">*Candidate's Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <label for="email">*E-mail ID:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+      <label for="contact">*Contact Number:</label>
+      <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+
+      <label for="education">*Education:</label>
+      <input type="text" id="education" name="education" placeholder="Enter your education details" required>
+
+      <label for="achievements">*Achievements:</label>
+      <input type="text" id="achievements" name="achievements" placeholder="Mention your achievements" required>
+
+      <label for="skills">*Technical Skills:</label>
+      <input type="text" id="skills" name="skills" placeholder="List your technical skills" required>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="img-container">
+      <img src="WhatsApp Image 2025-04-20 at 10.41.33 AM.jpeg" alt="Job Applicant">
+    </div>
+  </div>
+
+</body>
+</html>

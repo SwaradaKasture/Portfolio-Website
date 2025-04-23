@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple CD Record Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffbea;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #cc0000;
+    }
+    .cd-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .cd {
+      border: 1px solid #ddd;
+      padding: 10px;
+      width: 200px;
+      background-color: #fff;
+    }
+    .cd img {
+      width: 100%;
+    }
+    .cd-title {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .cd-price {
+      color: green;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .cart {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎶 CD Record Store</h1>
+
+  <div class="cd-container">
+    <div class="cd">
+      <img src="perfect.jpg" alt="Tu Hi Re">
+      <div class="cd-title">Perfect</div>
+      <div class="cd-price">₹150</div>
+      <button onclick="addToCart('Perfect', 150)">Add to Cart</button>
+    </div>
+
+    <div class="cd">
+      <img src="kadhi tu.jpg" alt="Zingaat">
+      <div class="cd-title">Kadhi Tuuu</div>
+      <div class="cd-price">₹160</div>
+      <button onclick="addToCart('Kadhi Tuuu', 160)">Add to Cart</button>
+    </div>
+
+    <div class="cd">
+      <img src="senorita.jpg" alt="Tum Hi Ho">
+      <div class="cd-title">Senorita</div>
+      <div class="cd-price">₹170</div>
+      <button onclick="addToCart('Senorita', 170)">Add to Cart</button>
+    </div>
+
+    <div class="cd">
+        <img src="baarishe.jpg" alt="Tum Hi Ho">
+        <div class="cd-title">Baarishein</div>
+        <div class="cd-price">₹170</div>
+        <button onclick="addToCart('Baarishein', 170)">Add to Cart</button>
+      </div>
+  </div>
+
+  <div class="cart">
+    <h2>🛒 Your Cart</h2>
+    <ul id="cart-list"></ul>s
+    <p><strong>Total: ₹<span id="total">0</span></strong></p>
+  </div>
+
+  <script>
+    let total = 0;
+    function addToCart(title, price) {
+      const list = document.getElementById("cart-list");
+      const item = document.createElement("li");
+      item.textContent = title + " - ₹" + price;
+      list.appendChild(item);
+
+      total += price;
+      document.getElementById("total").textContent = total;
+    }
+  </script>
+
+</body>
+</html>
